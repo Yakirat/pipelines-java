@@ -23,10 +23,16 @@ pool:
   #vmImage: windows-latest
   #agent.name -equals 'agent.name'
 
+#steps: [ script | bash | pwsh | powershell | checkout | task | templateReference | DisplayName]
 steps:
+#Tasks are the building blocks of a pipeline.
+#There's a catalog of tasks available to choose from. (Azure Devops Tasks)
 - task: Maven@3
+#Specific inputs to each task
   inputs:
     mavenPomFile: 'pom.xml'
+#Tells the JVM (java virtual machine) to limit the maximum memory to the Tomcat process.
+#This should be set to 75% of the available system memory.
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
