@@ -3,11 +3,25 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
+#Trigger blocks can't contain variables or template expressions.
+
+#Push trigger
+# A push trigger specifies which branches cause a continuous integration build to run.
+#- main
+#- develop
+# If you specify no push trigger, pushes to any branch trigger a build.
+#trigger: none # will disable CI builds (but not PR builds)
+
 trigger:
 - master
 
+#specifies which pool to use for a job of the pipeline
 pool:
   vmImage: ubuntu-latest
+#pool:
+  #name: My_name
+  #vmImage: windows-latest
+  #agent.name -equals 'agent.name'
 
 steps:
 - task: Maven@3
