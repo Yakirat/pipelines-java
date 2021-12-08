@@ -34,6 +34,7 @@ steps:
 #Tells the JVM (java virtual machine) to limit the maximum memory to the Tomcat process.
 #This should be set to 75% of the available system memory.
     mavenOptions: '-Xmx3072m'
+#In JDK 8 and JRE 8, the version strings are 1.8 and 1.8.0
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
