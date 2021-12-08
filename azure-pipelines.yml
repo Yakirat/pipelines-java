@@ -4,7 +4,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 #Trigger blocks can't contain variables or template expressions.
-
 #Push trigger
 # A push trigger specifies which branches cause a continuous integration build to run.
 #- main
